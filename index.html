@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    prompt: ['Prompt', 'sans-serif'],
+                    raleway: ['Raleway', 'sans-serif'],
+                },
+                extend: {
+                    animation: {
+                        'shake': 'shake 0.1s ease-in-out 3'
+                    },
+                    keyframes: {
+                        shake: {
+                            '0%, 100%': {transform: 'translateX(0)'},
+                            '25%': {transform: 'translateX(10px)'},
+                            '75%': {transform: 'translate(-10px)'}
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <title>TaskMaster - ToDo List Application</title>
+</head>
+<body class="font-raleway">
+    <section id="main">
+        <h1 class="text-white font-bold text-3xl bg-gradient-to-br from-[#97BC62] to-[#2C5F2D] rounded-lg p-2 w-max absolute top-12 -left-16 md:top-4 md:left-4 -rotate-90 md:rotate-0 scale-75 md:scale-100">TaskMaster</h1>
+        <div class="absolute bg-white bg-opacity-80 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 p-4 w-3/4 md:w-2/3 h-auto rounded-2xl shadow-3xl mt-0 md:mt-12">
+            <div class="flex flex-col md:flex-row items-center space-x-0 md:space-x-4 space-y-2 md:space-y-0">
+                <input id="input-box" type="text" class="flex-1 w-full text-lg rounded-lg p-2 px-4 outline-none shadow-3xl focus:scale-[102%] duration-200" placeholder="Enter your task">
+                <button id="add-btn" class="text-white text-lg bg-gradient-to-br from-[#97BC62] to-[#2C5F2D] rounded-lg p-2 px-4 font-medium shadow-3xl hover:scale-105 duration-200 w-full md:w-auto">Add</button>
+            </div>
+            <hr class="mx-auto border border-black border-opacity-30 rounded-full my-5 w-3/4" />
+            <div class="flex items-center justify-center h-[450px] bg- bg-opacity-70">
+                <div id="empty-task-msg" class="opacity-50 text-xl font-prompt hidden text-center">You currently don't have any tasks to do!</div>
+                <div id="all-tasks" class="w-full h-full px-2 space-y-4 overflow-y-scroll">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

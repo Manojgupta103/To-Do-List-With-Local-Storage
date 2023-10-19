@@ -1,0 +1,22 @@
+body{
+    background-color: #97BC62;
+    height: 100vh;
+    background-position: center;
+    background-repeat: repeat;
+    background-image: url(images/bg.svg);
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb {
+    background: #2C5F2D;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #97BC62;
+    width: 10px;
+}
