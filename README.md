@@ -4,8 +4,6 @@
 
 This is a simple web-based to-do list application that allows you to manage your tasks. What sets this to-do list apart is its use of local storage to save your tasks, ensuring that your to-do list persists even after you close the browser.
 
-![To-Do List Screenshot](screenshot.png)
-
 ## Features
 
 - Add tasks with a title and optional description.
